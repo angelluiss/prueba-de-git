@@ -1,0 +1,37 @@
+.modalsedes{
+    position: absolute;
+    height: 350px;
+    width: 100%;
+    background:#343a40;
+    border-top: 1px solid white;
+    overflow: scroll;
+    display: none;
+}
+
+.modaltop{
+    background: #3f474e;
+    width: 100%;
+    height: 40px;   
+    text-align: center;
+}
+
+.small-box-footer{
+    cursor: pointer;
+}
+
+.description-estados{
+    height: 400px;
+    background: #343a40;
+    width: 40%;
+    position: absolute;
+    top: 8%;
+    overflow: scroll;
+    display: none;
+}
+
+.description-top{
+    background: #3f474e;
+    text-align: center;
+    height: 40px;
+    line-height: 2.4;
+}
