@@ -2,7 +2,7 @@
     position: absolute;
     height: 350px;
     width: 100%;
-    background:#343a40;
+    background:#343a40cf;
     border-top: 1px solid white;
     overflow: scroll;
     display: none;
@@ -20,18 +20,55 @@
 }
 
 .description-estados{
-    height: 400px;
-    background: #343a40;
-    width: 40%;
+    height: 227px;
+    background: #343a40cf;
+    width: 54%;
     position: absolute;
-    top: 8%;
+    top: 0%;
     overflow: scroll;
     display: none;
+    left: 23%;
 }
 
 .description-top{
     background: #3f474e;
     text-align: center;
-    height: 40px;
-    line-height: 2.4;
+    height: 32px;
+    line-height: 2.1;
+}
+
+.modaltext{
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.modaltext .row{
+    border-bottom: 1px solid #9e9e9e33;
+}
+
+.modaltext h3, .description-estados h3{
+    width: 100%;
+    text-align: left;
+    font-size: 16px !important;
+    margin: 10px 0px 0px 10px;
+    font-weight: normal;
+}
+
+.modaltext small, .description-estados small{
+    margin-left: 10px;
+    font-weight: 100;
+}
+
+.modaltext i{
+    font-size: 25px;
+    color: #52585d;
+    margin-top: 0.9rem;
+}
+
+.description-estados i{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-top: 12px;
 }
