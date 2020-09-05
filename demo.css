@@ -72,3 +72,48 @@
     font-size: 35px;
     margin-top: 12px;
 }
+
+.description-sede-title{
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+}
+
+.content-description-sede{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+
+.info-box-icon{
+border-top-left-radius: 2px;
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 2px;
+display: block;
+float: left;
+height: 90px;
+width: 90px;
+text-align: center;
+font-size: 45px;
+line-height: 90px;
+background: rgba(0,0,0,0.2);
+}
+
+.info-caja-telemetrica ul li {
+    list-style: none;
+}
+
+.info-caja-telemetrica h4{
+    font-size: 20px;
+    text-align: center;
+}
+
+.info-caja-telemetrica ul{
+    text-align: center;
+    padding: 0;
+    margin-top: 15px;
+    font-weight: 100;
+}
