@@ -107,13 +107,32 @@ background: rgba(0,0,0,0.2);
 }
 
 .info-caja-telemetrica h4{
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 
 .info-caja-telemetrica ul{
-    text-align: center;
+    text-align: left;
     padding: 0;
     margin-top: 15px;
     font-weight: 100;
+}
+
+.info-caja-opto{
+    display: inline;
+    font-weight: bold;
+}
+
+.estrategia-opto{
+    display: inline;
+    font-weight: bold;
+}
+
+.verificar-contraseña{
+    padding: 20px 60px;
+    background-color: red;
+}
+
+.img-centrales-cantv{
+    padding: 8px;
 }

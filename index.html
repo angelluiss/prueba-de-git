@@ -5,7 +5,8 @@
   <meta http-equiv="Content-Type" content="text/html" charset= "UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thinkering | Inicio de sesión </title>
+  <title>Thinkering Vision | Inicio de sesión </title>
+  <link rel="shortcut icon" href="./dist/img/ThinkeringColor.png" type="image/x-icon">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -18,6 +19,14 @@
 </head>
 <body class="hold-transition login-page" style="background: #1a1a1a;">
 <div class="login-box">
+  <div class="login-logo-thinkering" style="width: 100%;
+  height: 200px;
+  background-image: url(./dist/img/logoacolor.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;">
+    
+  </div>
   <div class="login-logo">
     <a href="#" style="color: #ececec;"><b>Thinkering</b> Vision</a>
   </div>
@@ -28,21 +37,37 @@
 
       <form action="index.html">
         <div class="input-group mb-3">
-          <input type="email" id="email" class="form-control" placeholder="Email">
+          <input type="email" id="email" class="form-control" placeholder="Email" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
           </div>
         </div>
+        <div class="verificar-correo" style="display:none; background: #e87575;
+        border-radius: 3px;
+        border: 2px solid #c51313;
+        color: white;
+        text-align: center;
+        margin-bottom: 15px;
+        transition: all 300ms;"><h4 style="font-size: 17px;
+    margin: 5px;">Introduce un correo</h4></div>
         <div class="input-group mb-3">
-          <input type="password" id="password" class="form-control" placeholder="Password">
+          <input type="password" id="password" class="form-control" placeholder="Contraseña" required> 
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
         </div>
+        <div class="verificar-contraseña" style="display:none; background: #e87575;
+        border-radius: 3px;
+        border: 2px solid #c51313;
+        color: white;
+        text-align: center;
+        margin-bottom: 15px;
+        transition: all 300ms;"><h4 style="font-size: 17px;
+    margin: 5px;">Introduce una contraseña</h4></div>
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
@@ -54,7 +79,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" id="button-submit" class="btn btn-primary btn-block" >Entrar</button>
+            <a type="submit" id="button-submit" class="btn btn-primary btn-block" href="index1.html" >Entrar</a>
           </div>
           <!-- /.col -->
         </div>
@@ -62,12 +87,12 @@
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="register.html">Registrarme</a>
+        <a href="register.html">Registrar Caja Telemétrica</a>
       </p>
-      <p class="mb-1">
-        <a href="pages/examples/forgot-password.html">Olvidé mi contraseña</a>
+      <!--<p class="mb-1">
+        <a href="#">Olvidé mi contraseña</a>
       </p>
-    </div>
+    </div> -->
     <!-- /.login-card-body -->
   </div>
 </div>
@@ -82,5 +107,50 @@
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
 <script src="./main.js"></script>
+
+<script>
+$(document).ready(function(){
+
+  $('#email').focusout(function(){
+    var verificarEmail = $('.verificar-correo');
+    if($('#email').val().length < 1) {  
+      verificarEmail.css('display', 'block');
+    }else if ($('#email').val().length > 1){
+      verificarEmail.css('display', 'none');
+    }  
+  });
+
+  $('#email').focusout(function(){
+    var verificarArroba = $('#email');
+	  var cont=0;
+	  for (var i = 0, j = verificarArroba.length; i < j; i++) {
+      if(verificarArroba[i] == "@"){
+	      cont++;
+	    }
+	  }if(cont == 0){
+	    if($('.verificar-arroba').css('display', 'none')){
+        $('.verificar-arroba').css('display', 'block')
+      }else{
+        $('.verificar-arroba').css('display', 'none')
+      }
+    }
+  });
+
+  $('#password').focusout(function(){
+    var verificarContraseña = $('.verificar-contraseña');
+    if($('#password').val().length < 1) {  
+      verificarContraseña.css('display', 'block');
+    }else if ($('#password').val().length > 1){
+      verificarContraseña.css('display', 'none');
+    }  
+  });
+
+
+});
+  
+
+</script>
+
+
 </body>
 </html>

@@ -1,32 +1,5 @@
 $( document ).ready(function() {
 
-    var boton = $('#button-submit');
-    var email= $('#email'); 
-    var password = $('#password');
-
-    boton.click(function(){
-
-        var emailConfirm = email.val();
-        var passConfirm = password.val();
-
-        var credenciales = { "mail": emailConfirm, "password": passConfirm }
-
-        console.log(JSON.stringify(credenciales));
-
-        fetch('https://reqres.in/api/login', {
-            method : 'POST',
-            body : JSON.stringify(credenciales),
-            headers: {
-                'Content-type': 'application/json'
-            }
-        }).then(res=>res.json())
-
-        
-    });
-
-
-
-
     //ventanas modales de status de sedes
     var modales = $('.small-box-footer');
 
@@ -120,25 +93,31 @@ $( document ).ready(function() {
 
 
     //      **  Modal de Sedes    **
+    
+    $('.modaltext').append("<div class='row'> <div class='col-10'><a href='./pages/centrales/centrales-miranda.html' style='color:white;'><h3>Estado Miranda</h3><small>Central Los Palos Grandes</small></a></div> <div class='col-2'><a href='./pages/centrales/centrales-miranda.html'><i class='fas fa-chevron-right'></i></a></div> </div>");
 
-    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Miranda</h3><small>Sede Central</small></div> <div class='col-2'><a href='./pages/estados/miranda.html'><i class='fas fa-chevron-right'></i></a></div> </div>");
+    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Falcón</h3><small>Central El Hatillo</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
 
-    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Falcón</h3><small>Sede de Coro</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
+    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Guarico</h3><small>Central La Trinidad</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
 
-    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Guarico</h3><small>Sede calle Don Bosco</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
+    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Trujillo</h3><small>Central Chacao</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
 
-    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Trujillo</h3><small>Sede plaza Tal</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
+    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Lara</h3><small>Central Las Mercedes</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
 
-    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Lara</h3><small>Sede central</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
+    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Zulia</h3><small>Central El Cafetal</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
 
-    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Zulia</h3><small>Sede tal</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
+    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Zulia</h3><small>Central Macaracuay</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
+
+    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Zulia</h3><small>Central Chuao</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
+
+    $('.modaltext').append("<div class='row'> <div class='col-10'><h3>Estado Zulia</h3><small>Central Los Cortijos</small></div> <div class='col-2'><a href='#'><i class='fas fa-chevron-right'></i></a></div> </div>");
+    
 
 
 
     //      **  Modal de Estados **
 
-    $('.description-estados').append(" <div class='row'> <div class='col-2'><i class='fas fa-skull-crossbones' style='color:#c62f3dc7'></i> </div> <div class='col-8'> <div style='border-bottom: 1px solid #525151;padding-bottom: 5px;'> <h3>Sede Tal tal </h3> <small>Direcciòn ... </small> </div> <div style='border-bottom: 1px solid #525151;padding-bottom: 5px;'> <h3>Sede Tal tal </h3> <small>Direcciòn ... </small> </div>  </div> <div class='col-2'><i class='fas fa-chevron-right' style='color: #5d5d5d;'></i></div> </div> ")
+    $('.description-estados').append(" <div class='row'> <div class='col-2'><i class='fas fa-check-circle' style='color:#27983fa6'></i></div> <div class='col-8'> <a href='pages/centrales/centrales-miranda.html' style='color:white;'><div style='border-bottom: 1px solid #525151;padding-bottom: 5px;'> <h3>Central Charallave</h3> <small>Direcciòn ... </small> </div></a> <div style='border-bottom: 1px solid #525151;padding-bottom: 5px;'> <h3>Central Santa Teresa</h3> <small>Direcciòn ... </small> </div> <div style='border-bottom: 1px solid #525151;padding-bottom: 5px;'> <h3>Central Ocumare III</h3> <small>Direcciòn ... </small> </div>  <div style='border-bottom: 1px solid #525151;padding-bottom: 5px;'> <h3>Central Palo Alto</h3> <small>Direcciòn ... </small> </div> <div style='border-bottom: 1px solid #525151;padding-bottom: 5px;'> <h3>Central Los Picachos</h3> <small>Direcciòn ... </small> </div> </div>  <div class='col-2'><a href='pages/centrales/centrales-miranda.html'><i class='fas fa-chevron-right' style='color: #5d5d5d;'></i></a> <i class='fas fa-chevron-right' style='color: #5d5d5d;margin: 25px;'></i> <i class='fas fa-chevron-right' style='color: #5d5d5d;'></i> <i class='fas fa-chevron-right' style='color: #5d5d5d;margin:25px;'></i> <i class='fas fa-chevron-right' style='color: #5d5d5d;'></i> </div> </div> ")
 
-    $('.description-estados').append(" <div class='row'> <div class='col-2'><i class='fas fa-check-circle' style='color:#27983fa6'></i></div> <div class='col-8'> <div style='border-bottom: 1px solid #525151;padding-bottom: 5px;'> <h3>Sede Tal tal </h3> <small>Direcciòn ... </small> </div> <div style='border-bottom: 1px solid #525151;padding-bottom: 5px;'> <h3>Sede Tal tal </h3> <small>Direcciòn ... </small> </div>  </div> <div class='col-2'><i class='fas fa-chevron-right' style='color: #5d5d5d;'></i></div> </div> ")
 
 })

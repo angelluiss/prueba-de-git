@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<div>
+    <center>
+        <button type="submit" title="Send" id="button">
+            <h2>Send</h2>
+        </button>
+    </center>
+</div>
+   
+
+<script>
+
+
+   
+    const button = document.getElementById('button')
+    button.addEventListener('click',
+    ()=>{
+
+        const url = "http://127.0.0.1:5000/auth/login";
+        var authorati = btoa("oslomrp@gmail.com" + ":" + "123456789")
+        console.log(authorati)
+        fetch(url, {
+            'method' : 'GET',
+            "headers": {
+            "cookie": "session=eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiMThiNTM4MWZmYzg0MWEyY2JiODk0NmQyZDM3MmEwNWU2YmVhNDU4NCJ9.X1hVGw.UsixCg8gqBQ5Qrha1rBcVMLkyc4",
+            "authorization": "Basic "  + authorati
+        },
+        
+        
+        }).then(function (response) {
+            return response.text()
+        }).then(function (data) {
+            document.body.textContent = data
+            console.log(data)
+        }).catch(console.error)
+
+        
+    })
+
+    
+
+          
+    
+      
+    
+      //$( document ).ready( function() {
+       // $('#button-submit').click( async function(){
+        
+          
+       // });
+    //  });
+       
+    </script>
+</html>

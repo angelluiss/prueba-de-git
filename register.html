@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Registration Page</title>
+  <title>Thinkering Vision | Registro</title>
+  <link rel="shortcut icon" href="./dist/img/ThinkeringColor.png" type="image/x-icon">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -16,17 +17,25 @@
 </head>
 <body class="hold-transition register-page" style="background-color: rgb(26, 26, 26);">
 <div class="register-box">
-  <div class="register-logo">
-    <a href="#" style="color: #ececec;"><b>Thinkering </b>Vision</a>
+  <div class="login-logo-thinkering" style="width: 100%;
+  height: 200px;
+  background-image: url(./dist/img/logoacolor.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;">
+    
+  </div>
+  <div class="login-logo">
+    <a href="#" style="color: #ececec;"><b>Thinkering</b> Vision</a>
   </div>
 
   <div class="card">
     <div class="card-body register-card-body" style="background-color: #393939;">
-      <p class="login-box-msg" style="color: #ececec;">Registrar un nuevo usuario</p>
+      <p class="login-box-msg" style="color: #ececec;">Registrar Caja Telemétrica</p>
 
       <form action="../../index.html" method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Nombre completo">
+          <input type="text" class="form-control" placeholder="IP">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -34,7 +43,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" placeholder="Tipo de Controlador">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -42,7 +51,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Contraseña">
+          <input type="other" class="form-control" placeholder="Dirección MAC 1">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -50,7 +59,23 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Verificar contraseña">
+          <input type="other" class="form-control" placeholder="Dirección MAC 2">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Usuario">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Contraseña">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -74,7 +99,7 @@
         </div>
       </form>
 
-      <a href="index.html" class="text-center">Ya soy usuario</a>
+      <a href="index.html" class="text-center">Salir</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
